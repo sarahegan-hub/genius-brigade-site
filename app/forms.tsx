@@ -12,20 +12,20 @@ function ArrowIcon() {
 
 type SubmissionState = "idle" | "submitting" | "success" | "error";
 
-async function submitForm(event: FormEvent<HTMLFormElement>, formType: string) {
+async function submitForm(event: FormEvent<HTMLFormElement>, formName: string) {
   event.preventDefault();
-  const form = event.currentTarget;
-  const data = Object.fromEntries(new FormData(form).entries());
+  const data = new FormData(event.currentTarget);
+  data.set("form-name", formName);
+  const body = new URLSearchParams();
+  data.forEach((value, key) => body.append(key, String(value)));
 
-  const response = await fetch("/.netlify/functions/submit-form", {
+  const response = await fetch("/", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ ...data, formType }),
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: body.toString(),
   });
 
-  if (!response.ok) {
-    throw new Error("Submission failed");
-  }
+  if (!response.ok) throw new Error("Submission failed");
 }
 
 export function FoundingFamilyForm() {
@@ -34,7 +34,7 @@ export function FoundingFamilyForm() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     setState("submitting");
     try {
-      await submitForm(event, "Founding Family");
+      await submitForm(event, "founding-family");
       setState("success");
     } catch {
       setState("error");
@@ -53,7 +53,8 @@ export function FoundingFamilyForm() {
   }
 
   return (
-    <form className="join-form" onSubmit={handleSubmit}>
+    <form className="join-form" name="founding-family" method="POST" data-netlify="true" data-netlify-honeypot="website" onSubmit={handleSubmit}>
+      <input type="hidden" name="form-name" value="founding-family" />
       <div className="field-row">
         <label>
           First name <span aria-hidden="true">*</span>
@@ -108,7 +109,7 @@ export function CommunityInterestForm() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     setState("submitting");
     try {
-      await submitForm(event, "Community Interest");
+      await submitForm(event, "community-interest");
       setState("success");
     } catch {
       setState("error");
@@ -127,7 +128,8 @@ export function CommunityInterestForm() {
   }
 
   return (
-    <form className="join-form connect-form" onSubmit={handleSubmit}>
+    <form className="join-form connect-form" name="community-interest" method="POST" data-netlify="true" data-netlify-honeypot="website" onSubmit={handleSubmit}>
+      <input type="hidden" name="form-name" value="community-interest" />
       <div className="field-row">
         <label>
           Your name <span aria-hidden="true">*</span>
