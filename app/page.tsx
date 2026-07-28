@@ -514,10 +514,6 @@ export default function Home() {
                 </div>
               </li>
             </ol>
-            <p className="framework-footnote">
-              Five steps a five-year-old can follow; honestly, plenty of
-              adults could too.
-            </p>
           </article>
         </div>
       </section>
