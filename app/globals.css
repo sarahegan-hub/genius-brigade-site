@@ -1989,10 +1989,10 @@ footer {
   }
 
   .hero-art-frame img {
-    width: auto;
-    max-width: none;
-    height: 390px;
-    object-fit: cover;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
     object-position: center;
     border-radius: 0;
   }
