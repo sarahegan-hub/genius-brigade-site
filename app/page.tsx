@@ -31,7 +31,7 @@ const brigade = [
     name: "AL Hampton",
     meta: "10 · The Builder",
     accent: "gold",
-    image: "/assets/al-visual.png",
+    image: "/assets/al-visual.webp",
     imageWidth: 1024,
     imageHeight: 1536,
     alt: "AL Hampton surrounded by amplified gold springs",
@@ -66,7 +66,7 @@ const brigade = [
     name: "Scout Harper",
     meta: "5 · The Curious Explorer",
     accent: "pink",
-    image: "/assets/scout-visual-2.png",
+    image: "/assets/scout-visual-2.webp",
     imageWidth: 1024,
     imageHeight: 1536,
     alt: "Scout Harper smiling with wonder",
@@ -97,7 +97,7 @@ const brigade = [
     name: "Jax Parker",
     meta: "8 · The Puzzle Solver",
     accent: "aqua",
-    image: "/assets/jax-visual.png",
+    image: "/assets/jax-visual.webp",
     imageWidth: 1023,
     imageHeight: 1537,
     alt: "Jax Parker surrounded by data aqua pattern lines",
@@ -250,7 +250,7 @@ export default function Home() {
         <div className="hero-art shell">
           <div className="hero-art-frame">
             <Image
-              src="/assets/brigade-banner.png"
+              src="/assets/brigade-banner.webp"
               alt="AL, Scout, BYTE and Jax, the four founding members of Genius Brigade"
               width={1774}
               height={887}
