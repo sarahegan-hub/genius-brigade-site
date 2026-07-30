@@ -696,7 +696,7 @@ export default function Home() {
         <div className="shell footer-legal">
           <div>
             <p>Glamabyte Pty Ltd</p>
-            <p>ABN 82 887 137 179 · Melbourne, Australia</p>
+            <p>ABN 96 691 867 464 · Melbourne, Australia</p>
             <p>
               <a href="mailto:hello@glamabyte.com.au">hello@glamabyte.com.au</a>
             </p>
