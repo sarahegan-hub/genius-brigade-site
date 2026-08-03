@@ -97,7 +97,7 @@ export function FoundingFamilyForm() {
       </button>
       <p className="privacy-notice">
         <strong>Privacy collection notice:</strong> Glamabyte Pty Ltd collects the information in this form to manage Founding Family participation, provide requested resources and invite feedback. Postcode is optional. If you do not provide the required information, we cannot register your interest. We handle your information in accordance with our{" "}
-        <a href="https://glamabyte.com.au/privacy-policy">Privacy Policy</a>.
+        <a href="/privacy-policy">Privacy Policy</a>.
       </p>
     </form>
   );
@@ -180,7 +180,7 @@ export function CommunityInterestForm() {
       </button>
       <p className="privacy-notice">
         <strong>Privacy collection notice:</strong> Glamabyte Pty Ltd collects the information in this form to respond to your partnership interest and keep you informed about relevant workshops and activations. We handle your information in accordance with our{" "}
-        <a href="https://glamabyte.com.au/privacy-policy">Privacy Policy</a>.
+        <a href="/privacy-policy">Privacy Policy</a>.
       </p>
     </form>
   );
