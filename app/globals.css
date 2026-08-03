@@ -1806,6 +1806,243 @@ footer {
   max-width: 650px;
 }
 
+/* Privacy policy */
+.policy-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 92% 5%, rgba(19, 223, 242, 0.1), transparent 24rem),
+    radial-gradient(circle at 5% 18%, rgba(255, 22, 143, 0.1), transparent 26rem),
+    var(--ink);
+}
+
+.policy-header {
+  display: flex;
+  min-height: 96px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.policy-header .back-link {
+  color: #d7d5dc;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.policy-document {
+  width: min(900px, calc(100% - 48px));
+  padding-block: clamp(72px, 9vw, 120px);
+}
+
+.policy-hero {
+  margin-bottom: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--line);
+}
+
+.policy-hero h1 {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 950;
+  letter-spacing: -0.07em;
+  line-height: 0.94;
+  text-transform: uppercase;
+}
+
+.policy-version {
+  margin: 24px 0 0;
+  color: var(--aqua);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.policy-applies {
+  max-width: 650px;
+  margin: 10px 0 0;
+  color: #bdbbc4;
+  line-height: 1.6;
+}
+
+.policy-commitment,
+.policy-ai-commitment {
+  border: 1px solid rgba(255, 22, 143, 0.42);
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(255, 22, 143, 0.13), rgba(168, 85, 247, 0.08));
+}
+
+.policy-commitment {
+  margin-bottom: 64px;
+  padding: clamp(26px, 5vw, 44px);
+}
+
+.policy-commitment h2 {
+  margin: 0 0 24px;
+  color: var(--pink-soft);
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.policy-commitment ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.policy-commitment li {
+  position: relative;
+  padding-left: 24px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+.policy-commitment li::before {
+  position: absolute;
+  top: 0.55em;
+  left: 2px;
+  width: 9px;
+  height: 9px;
+  background: var(--pink);
+  content: "";
+  transform: rotate(45deg);
+}
+
+.policy-document > section {
+  margin-top: 58px;
+}
+
+.policy-document section h2 {
+  margin: 0 0 22px;
+  color: white;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  letter-spacing: -0.035em;
+}
+
+.policy-document section h3 {
+  margin: 30px 0 10px;
+  color: var(--aqua);
+  font-size: 0.88rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.policy-document section p,
+.policy-document section li {
+  color: #c6c4cc;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.policy-document section p {
+  margin: 0 0 16px;
+}
+
+.policy-document section ul {
+  margin: 14px 0 22px;
+  padding-left: 24px;
+}
+
+.policy-document section li + li {
+  margin-top: 8px;
+}
+
+.policy-document section a {
+  color: var(--aqua);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.policy-ai-commitment {
+  margin: 0 0 28px;
+  padding: 24px 28px;
+}
+
+.policy-ai-commitment strong {
+  color: var(--pink-soft);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.policy-ai-commitment p {
+  margin: 10px 0 0 !important;
+  color: white !important;
+  font-weight: 650;
+}
+
+.policy-governance dl {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.policy-governance dl > div {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  padding: 16px 20px;
+}
+
+.policy-governance dl > div + div {
+  border-top: 1px solid var(--line);
+}
+
+.policy-governance dt {
+  color: #8c8994;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.policy-governance dd {
+  margin: 0;
+  color: white;
+  line-height: 1.5;
+}
+
+.policy-footer {
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 700px) {
+  .policy-header,
+  .policy-document {
+    width: min(100% - 32px, 900px);
+  }
+
+  .policy-header {
+    min-height: 82px;
+  }
+
+  .policy-header .brand {
+    width: 132px;
+  }
+
+  .policy-header .back-link {
+    font-size: 0.64rem;
+  }
+
+  .policy-commitment ul {
+    grid-template-columns: 1fr;
+  }
+
+  .policy-governance dl > div {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}
+
 @media (max-width: 900px) {
   .site-header {
     grid-template-columns: 1fr auto;
