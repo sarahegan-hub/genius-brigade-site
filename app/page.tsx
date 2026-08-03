@@ -711,9 +711,9 @@ export default function Home() {
           <p>© 2026 Glamabyte Pty Ltd. All rights reserved.</p>
           <p>
             Genius Brigade is created by Glamabyte.{" "}
-            <a href="https://glamabyte.com.au/privacy-policy">
+            <Link href="/privacy-policy">
               Privacy policy
-            </a>
+            </Link>
           </p>
         </div>
       </footer>
